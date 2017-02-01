@@ -21,8 +21,6 @@ class Board
   def valid_move?(start_pos)
     raise "Invalid starting cup" unless start_pos.between?(0, 5)  || start_pos.between?(7, 12)
     return false if @cups[start_pos].empty?
-    return true if current_player_name == name1 and start_pos.between?(0, 5)
-    return true if current_player_name == name2 and start_pos.between?(7, 12)
     false
   end
 
@@ -34,6 +32,8 @@ class Board
     this_cup = (start_pos + 1) % 14
     @cups[start_pos].size.times do |stone|
       @cups[this_cup] << @cups[start_pos].pop
+      puts "#{start_pos} now has #{@cups[start_pos].size} stones"
+      puts "#{this_cup} now has #{@cups[this_cup].size} stones"
       this_cup = (this_cup + 1) % 14 unless @cups[start_pos].empty?
       this_cup = 0 if current_player_name == player2 && this_cup == 13
       this_cup = 7 if current_player_name == player1 && this_cup == 6

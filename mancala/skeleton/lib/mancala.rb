@@ -14,6 +14,7 @@ class Mancala
     current_player = @player1
     until won?
       take_turn(current_player)
+      @board.render
       current_player = current_player == @player1 ? @player2 : @player1
     end
 
@@ -22,7 +23,6 @@ class Mancala
 
   def take_turn(current_player)
     move_result = :prompt
-
     until move_result == :switch
       if move_result == :prompt
         print_indices
@@ -62,3 +62,6 @@ class Mancala
     puts " 1   2   3   4   5   6"
   end
 end
+
+game = Mancala.new("joe", "bob")
+game.play
