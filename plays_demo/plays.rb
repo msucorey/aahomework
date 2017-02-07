@@ -35,9 +35,9 @@ class Play
   end
 
   def self.find_by_playwright(name)
-    PlayDBConnection.instance.execute(<<-SQL, name)
+    data = PlayDBConnection.instance.execute(<<-SQL, name)
       SELECT
-        title
+        *
       FROM
         plays
       JOIN
@@ -45,6 +45,7 @@ class Play
       WHERE
         playwright = ?
     SQL
+    Playwright.new("id" => data[playwrights.id], "name" => data[playwrights.name])
   end
 
   def initialize(options)
