@@ -6,12 +6,9 @@ import GiphysSearchContainer from './giphys_search_container';
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <h3>root</h3>
+      <GiphysSearchContainer />
     </Provider>
   );
 };
 
 export default Root;
-
-
-// <GiphysSearchContainer />
