@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Rails.application.config.session_store :cookie_store, key: '_n_1_buster_session'
+Rails.application.config.session_store :cookie_store, key: '_n1_buster_session'
