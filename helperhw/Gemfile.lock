@@ -61,7 +61,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.4)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug_inspector (0.0.2)
     erubi (1.8.0)
@@ -69,8 +69,8 @@ GEM
     faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.25)
-    globalid (0.4.1)
-      activesupport (>= 4.2.0)
+    globalid (1.0.1)
+      activesupport (>= 5.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (1.5.3)
@@ -98,7 +98,7 @@ GEM
       rake
     mini_mime (1.0.1)
     mini_portile2 (2.8.0)
-    minitest (5.11.3)
+    minitest (5.17.0)
     multi_json (1.13.1)
     newrelic_rpm (3.18.1.330)
     nio4r (2.3.1)
